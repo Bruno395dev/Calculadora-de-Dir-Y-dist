@@ -10,6 +10,8 @@ function calcularDistanciaYDireccion(eA, nA, eB, nB) {
 
     const anguloMilesimos = anguloGrados / 0.05625;
 
+    const contrarrumbo = (anguloMilesimos + 3200) % 6400;
+
     let cuadrante;
     if (deltaE >= 0 && deltaN >= 0) cuadrante = "I";
     else if (deltaE >= 0 && deltaN < 0) cuadrante = "II";
@@ -19,6 +21,7 @@ function calcularDistanciaYDireccion(eA, nA, eB, nB) {
     return {
         distancia: distancia.toFixed(3),
         direccion: anguloMilesimos.toFixed(2),
+        contrarrumbo: contrarrumbo.toFixed(2),
         cuadrante
     };
 }
@@ -34,8 +37,15 @@ function mostrarResultado() {
         return;
     }
 
-    const { distancia, direccion, cuadrante } = calcularDistanciaYDireccion(eA, nA, eB, nB);
+    const { distancia, direccion, contrarrumbo, cuadrante } = calcularDistanciaYDireccion(eA, nA, eB, nB);
 
     document.getElementById('resultado').innerText =
-        `📏 Distancia: ${distancia} m\n🧭 Dirección: ${direccion} milésimos\n📐 Cuadrante: ${cuadrante}`;
+        `📏 Distancia: ${distancia} m\n🧭 Dirección: ${direccion} milésimos\n🔁 Contrarrumbo: ${contrarrumbo} milésimos\n📐 Cuadrante: ${cuadrante}`;
+
+
 }
+
+// Aqui esta el Contra rumbo //
+// en milesimos //
+
+
