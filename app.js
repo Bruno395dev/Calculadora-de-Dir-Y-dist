@@ -8,7 +8,7 @@ function calcularDistanciaYDireccion(eA, nA, eB, nB) {
     let anguloGrados = anguloRad * (180 / Math.PI);
     if (anguloGrados < 0) anguloGrados += 360;
 
-    const anguloMilesimos = anguloGrados * (1000 / 90);
+    const anguloMilesimos = anguloGrados / 0.05625;
 
     let cuadrante;
     if (deltaE >= 0 && deltaN >= 0) cuadrante = "I";
