@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="icons/icon-192.png">
+    <meta name="theme-color" content="#03dac6">
+    <meta charset="UTF-8">
+    <title>Calculadora de Direccion y Distancia</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <h1>Calculadora de dir y dist</h1>
+
+        <label>Derechas A: <input type="number" id="eA"></label>
+        <label>Arribas A: <input type="number" id="nA"></label>
+        <label>Derechas B: <input type="number" id="eB"></label>
+        <label>Arribas B: <input type="number" id="nB"></label>
+
+        <button onclick="mostrarResultado()">Calcular</button>
+
+        <div id="resultado"></div>
+    </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(reg => console.log('✅ Service Worker registrado:', reg.scope))
+                .catch(err => console.log('❌ Falló el registro:', err));
+        }
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+body {
+    background-color: #121212;
+    color: #f0f0f0;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor {
+    background: #1e1e1e;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    width: 300px;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    background: #2e2e2e;
+    border: none;
+    color: white;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #03dac6;
+    border: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#resultado {
+    margin-top: 20px;
+    background: #2e2e2e;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/*Reset*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #121212;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    min-height: 100vh;
+}
+
+.contenedor {
+    background: #1e1e1e;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #000;
+    width: 100%;
+    max-width: 400px;
+    transition: 0.3s;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #03dac6;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background: #2e2e2e;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #03dac6;
+    border: none;
+    border-radius: 8px;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #00bfa5;
+}
+
+#resultado {
+    margin-top: 20px;
+    background: #2e2e2e;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    white-space: pre-line;
+    line-height: 1.5;
+}
+
+/* Medias */
+@media screen and (max-width: 480px) {
+    .contenedor {
+        padding: 1.5rem;
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    input,
+    button {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+
+    #resultado {
+        font-size: 0.9rem;
+    }
+}
